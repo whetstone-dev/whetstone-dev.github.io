@@ -1,0 +1,115 @@
+import type { Dictionary } from '../types';
+
+export const es: Dictionary = {
+  meta: {
+    title: 'whetstone-dev: laboratorio de IA open source',
+    description: 'whetstone-dev es un laboratorio de IA open source de Colombia. Creamos skills y guías que convierten a los agentes generalistas en especialistas.',
+    projectTitle: '{name} | whetstone-dev',
+  },
+  nav: {
+    home: 'Inicio de whetstone-dev',
+    about: 'Nosotros',
+    work: 'Qué hacemos',
+    projects: 'Proyectos',
+    team: 'Equipo',
+    contact: 'Contacto',
+    mainLabel: 'Principal',
+    languageLabel: 'Idioma',
+    themeLabel: 'Cambiar modo oscuro',
+  },
+  copy: { label: 'Copiar comando', done: 'Copiado', failed: 'No se pudo copiar. Selecciona el texto y pulsa Ctrl+C.' },
+  hero: {
+    line1: 'Agentes más afilados,',
+    line2: 'construidos en abierto.',
+    lede: 'whetstone-dev es un laboratorio de IA open source de Colombia. Creamos skills y guías que convierten a los agentes generalistas en especialistas.',
+    work: 'Qué hacemos',
+    team: 'Conoce al equipo',
+  },
+  about: {
+    manifesto:
+      'Los agentes de IA saben un poco de todo. Nosotros les damos profundidad: los procedimientos, las herramientas y el criterio de quienes hacen ese trabajo todos los días. Todo lo que hacemos es abierto, probado y construido un dominio a la vez.',
+    values: [
+      { title: 'Abierto por defecto', body: 'Cada proyecto es público y con licencia MIT desde el primer commit.' },
+      { title: 'Probado antes de compartir', body: 'Las herramientas llevan tests que corren en cada push. Nuestra primera skill pasa 21 de 21.' },
+      { title: 'Específico antes que genérico', body: 'Vamos a fondo en un dominio antes de pasar al siguiente. La profundidad es lo que hace útil a un agente.' },
+    ],
+    facts: [
+      { label: 'Fundada en', value: '2026' },
+      { label: 'Con base en', value: 'Colombia' },
+      { label: 'Licencia', value: 'MIT' },
+      { label: 'Mantenedores', value: '2' },
+    ],
+  },
+  areas: {
+    title: 'Qué hacemos',
+    sub: 'Dos líneas de trabajo con un mismo objetivo: agentes que saben lo que hacen.',
+    shipping: 'Disponible',
+    inProgress: 'En camino',
+    skills: {
+      title: 'Skills para agentes',
+      body: 'Conocimiento de un dominio, scripts probados y plantillas, empaquetados para que un agente los cargue cuando la tarea lo pide. Cada una se instala con un solo comando.',
+      link: 'Ver nuestros proyectos',
+    },
+    research: {
+      title: 'Investigación y guías',
+      body: 'Lo que aprendemos mientras construimos: cómo diseñar una skill, cómo revisar lo que produce un agente, qué funciona y qué no. Las primeras se están escribiendo.',
+      link: 'Seguir el trabajo en GitHub',
+    },
+  },
+  projects: {
+    title: 'Proyectos',
+    sub: 'Todo lo que construimos es público, con su propio repositorio, licencia e historial de versiones.',
+    kinds: { skill: 'Skill', guide: 'Guía', site: 'Sitio web' },
+    status: { active: 'Activo', 'in-progress': 'En camino' },
+    website: 'Sitio web',
+    source: 'Código',
+    details: 'Detalles',
+    next: {
+      title: 'Tu idea puede ser la siguiente',
+      body: '¿Conoces un dominio en el que los agentes se quedan cortos? Propón un proyecto y constrúyelo con nosotros.',
+      cta: 'Proponer un proyecto',
+    },
+  },
+  facts: { version: 'Versión', license: 'Licencia', requires: 'Requiere', dependencies: 'Dependencias', none: 'Ninguna' },
+  stage: {
+    label: 'Resultado en vivo de {name}',
+    open: 'Abrir',
+    loading: 'Cargando',
+    tablistLabel: 'Resultados de ejemplo',
+    iframeTitle: 'Resultado interactivo generado por el proyecto',
+  },
+  team: {
+    title: 'Las personas detrás',
+    sub: 'whetstone-dev somos dos desarrolladores de Colombia construyendo las herramientas que queremos usar.',
+    avatarAlt: 'Avatar de GitHub de {name}',
+    outro: 'Somos un equipo pequeño. Si quieres construir con nosotros, empieza una conversación.',
+  },
+  contact: {
+    title: 'Hablemos.',
+    body: 'Todas las conversaciones pasan por GitHub, en abierto. Elige el canal que te sirva.',
+    discussion: { title: 'Abrir una discusión', body: 'Preguntas, ideas o comentarios sobre cualquier cosa que hagamos.' },
+    propose: { title: 'Proponer un proyecto', body: 'Un dominio, una herramienta o una guía que quieras ver construida.' },
+    follow: { title: 'Seguirnos en GitHub', body: 'Proyectos nuevos y versiones, a medida que salen.' },
+  },
+  detail: {
+    crumbsLabel: 'Ruta de navegación',
+    live: 'Velo funcionando',
+    installLabel: 'Método de instalación',
+    tabNpx: 'npx skills',
+    tabGit: 'git clone',
+    gitUnix: 'macOS / Linux',
+    gitWindows: 'Windows (PowerShell)',
+    gitHint: 'Después reinicia tu agente para que cargue la skill nueva.',
+    asks: 'Pídele a tu agente cosas como',
+  },
+  notFound: {
+    title: 'Esta página no existe.',
+    body: 'Puede que el enlace sea antiguo o que el proyecto haya cambiado de nombre.',
+    cta: 'Ir al inicio',
+  },
+  footer: {
+    tagline: 'Laboratorio de IA open source de Colombia.',
+    linksLabel: 'Enlaces de la organización',
+    license: 'Licencia MIT',
+  },
+};

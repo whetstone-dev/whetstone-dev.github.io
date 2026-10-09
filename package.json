@@ -1,0 +1,26 @@
+{
+  "name": "whetstone-dev-site",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Website for the whetstone-dev organization: the catalog of open-source agent skills (Next.js static export for GitHub Pages)",
+  "type": "module",
+  "scripts": {
+    "dev": "next dev -p 4175",
+    "build": "next build",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=22.18"
+  },
+  "dependencies": {
+    "next": "^16.4.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "typescript": "~5.9.3"
+  }
+}

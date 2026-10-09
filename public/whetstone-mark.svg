@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <title>whetstone-dev — the prompt ">_" where the cursor is a whetstone</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#161d2e"/>
+      <stop offset="1" stop-color="#0a0e17"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.56" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#f5a524" stop-opacity=".16"/>
+      <stop offset="1" stop-color="#f5a524" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Piedra: cara de grano grueso (teal) y fino (claro) -->
+    <linearGradient id="coarse" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#34dcc6"/>
+      <stop offset="1" stop-color="#11a896"/>
+    </linearGradient>
+    <linearGradient id="fine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f4f7fb"/>
+      <stop offset="1" stop-color="#cfd8e4"/>
+    </linearGradient>
+    <linearGradient id="side" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0c6b61"/>
+      <stop offset=".5" stop-color="#0c6b61"/>
+      <stop offset=".5" stop-color="#7a879a"/>
+      <stop offset="1" stop-color="#5f6c7f"/>
+    </linearGradient>
+    <!-- Acero del chevron -->
+    <linearGradient id="steel" gradientUnits="userSpaceOnUse" x1="120" y1="140" x2="300" y2="370">
+      <stop offset="0" stop-color="#c3cfdd"/>
+      <stop offset="1" stop-color="#75869c"/>
+    </linearGradient>
+    <linearGradient id="bevel" gradientUnits="userSpaceOnUse" x1="120" y1="140" x2="300" y2="370">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#e3e9f1"/>
+    </linearGradient>
+    <radialGradient id="spark" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#fff7e0"/>
+      <stop offset=".4" stop-color="#ffc857" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="face"><rect x="292" y="318" width="132" height="46" rx="12"/></clipPath>
+    <filter id="drop" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#000" flood-opacity=".5"/>
+    </filter>
+  </defs>
+
+  <rect width="512" height="512" fill="url(#bg)"/>
+  <rect width="512" height="512" fill="url(#glow)"/>
+
+  <!-- ">" de acero con bisel -->
+  <g filter="url(#drop)">
+    <polyline points="120,148 238,256 120,364" fill="none" stroke="url(#steel)"
+      stroke-width="48" stroke-linejoin="miter" stroke-miterlimit="10"/>
+    <polyline points="117,142 231,247 132,338" fill="none" stroke="url(#bevel)"
+      stroke-width="14" stroke-linejoin="miter" stroke-miterlimit="10"/>
+  </g>
+
+  <!-- "_" cursor = piedra de afilar de dos caras -->
+  <g filter="url(#drop)">
+    <rect x="292" y="332" width="132" height="46" rx="12" fill="url(#side)"/>
+    <g clip-path="url(#face)">
+      <rect x="292" y="318" width="66" height="46" fill="url(#coarse)"/>
+      <rect x="358" y="318" width="66" height="46" fill="url(#fine)"/>
+      <g fill="#0b5f57" opacity=".35">
+        <circle cx="304" cy="330" r="1.9"/><circle cx="318" cy="348" r="1.6"/><circle cx="332" cy="328" r="2"/>
+        <circle cx="344" cy="352" r="1.7"/><circle cx="312" cy="356" r="1.5"/><circle cx="350" cy="334" r="1.5"/>
+      </g>
+      <rect x="292" y="318" width="132" height="6" fill="#fff" opacity=".22"/>
+    </g>
+  </g>
+
+  <!-- Destello justo en la punta del filo -->
+  <circle cx="284" cy="244" r="40" fill="url(#spark)"/>
+  <path d="M284 220 C286.4 237 288.6 240 307 244 C288.6 248 286.4 251 284 268 C281.6 251 279.4 248 261 244 C279.4 240 281.6 237 284 220 Z" fill="#fffbeb"/>
+  <path d="M322 196 C323 204 324.4 205.4 332 206.4 C324.4 207.4 323 208.8 322 216 C321 208.8 319.6 207.4 312 206.4 C319.6 205.4 321 204 322 196 Z" fill="#ffd27a"/>
+</svg>
