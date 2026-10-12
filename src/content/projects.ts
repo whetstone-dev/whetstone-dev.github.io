@@ -108,6 +108,73 @@ export const projects: Project[] = [
     },
   },
   {
+    slug: 'rack-cabling-designer',
+    kind: 'skill',
+    status: 'active',
+    version: '0.1.0',
+    license: 'MIT',
+    requires: 'Node 22.18+',
+    dependencies: 0,
+    repo: 'https://github.com/whetstone-dev/rack-cabling-designer',
+    site: 'https://whetstone-dev.github.io/rack-cabling-designer/',
+    summary: {
+      en: 'An agent skill to design, validate and document IT racks, structured cabling and rack power, from one model.',
+      es: 'Una skill para diseñar, validar y documentar racks, cableado estructurado y energía de rack, desde un solo modelo.',
+    },
+    description: {
+      en: 'Turns your agent into an infrastructure designer: rack elevations, cable schedules, labels, BOM and A/B power budgets, checked against 38 engineering rules. Works with Claude Code, Codex and Cursor.',
+      es: 'Convierte a tu agente en un diseñador de infraestructura: elevaciones de rack, cable schedules, etiquetas, BOM y presupuestos de energía A/B, validados contra 38 reglas de ingeniería. Funciona con Claude Code, Codex y Cursor.',
+    },
+    preview: {
+      src: '/projects/rack-cabling-designer/preview.png',
+      width: 1440,
+      height: 900,
+      alt: {
+        en: 'The rack-cabling-designer website with an interactive rack elevation of a two-rack data hall pod',
+        es: 'La web de rack-cabling-designer con una elevación de rack interactiva de un pod de data center de dos racks',
+      },
+    },
+    install: {
+      npx: 'npx skills add whetstone-dev/rack-cabling-designer',
+      git: {
+        unix: 'git clone https://github.com/whetstone-dev/rack-cabling-designer.git && node rack-cabling-designer/installer/install.ts',
+        windows: 'git clone https://github.com/whetstone-dev/rack-cabling-designer.git; node rack-cabling-designer/installer/install.ts',
+      },
+    },
+    prompts: {
+      en: [
+        'Design a 24U comms cabinet for one office floor and give me the elevation and the BOM',
+        'Will PDU A survive if feed B fails?',
+        'Is it OK to run 10GBASE-T over 60 m of Cat6?',
+      ],
+      es: [
+        'Diseña un gabinete de 24U para un piso de oficina y dame la elevación y el BOM',
+        '¿La PDU A aguanta si falla la acometida B?',
+        '¿Puedo correr 10GBASE-T sobre 60 m de Cat6?',
+      ],
+    },
+    artifacts: {
+      base: 'https://whetstone-dev.github.io/rack-cabling-designer/examples/',
+      items: [
+        {
+          file: 'datacenter-pod/elevation',
+          label: { en: 'Data hall pod', es: 'Pod de data center' },
+          note: { en: '2 × 42U, A/B power, 0 errors', es: '2 × 42U, energía A/B, 0 errores' },
+        },
+        {
+          file: 'small-office/elevation',
+          label: { en: 'Small office cabinet', es: 'Gabinete de oficina' },
+          note: { en: '24U, horizontal cabling, 0 errors', es: '24U, cableado horizontal, 0 errores' },
+        },
+        {
+          file: 'broken-rack/elevation',
+          label: { en: 'Broken rack', es: 'Rack con errores' },
+          note: { en: 'Breaks every rule family on purpose', es: 'Rompe cada familia de reglas a propósito' },
+        },
+      ],
+    },
+  },
+  {
     slug: 'whetstone-dev.github.io',
     kind: 'site',
     status: 'active',
